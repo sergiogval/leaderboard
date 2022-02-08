@@ -1,16 +1,10 @@
 {
-  "name": "leaderboard",
-  "version": "1.0.0",
-  "description": "",
-  "private": true,
-  "scripts": {
-    "test": "jest",
-    "build":"webpack",
-    "start": "webpack-dev-server"
-  },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "path": "^0.12.7"
+  },
+  "description": "",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.6.0",
@@ -28,8 +22,15 @@
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
   },
-  "dependencies": {
-    "lodash": "^4.17.21",
-    "path": "^0.12.7"
-  }
+  "keywords": [],
+  "license": "ISC",
+  "name": "leaderboard",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
+  "version": "1.0.0",
+  "main": "webpack.config.js"
 }

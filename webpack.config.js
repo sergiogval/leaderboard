@@ -1,20 +1,20 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import * as path from 'path';
+import 'htmlWebpackPlugin' from './html-webpack-plugin'
+
 
 module.exports = {
   entry: './src/index.js',
   mode: 'development',
   devServer: {
-    static: './dist',
+    "static": './dist',
   },
   plugins: [
-    new HtmlWebpackPlugin({
+
       template: './src/index.html',
     }),
   ],
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: (__dirname, 'dist'),
     clean: true,
   },
   module: {
