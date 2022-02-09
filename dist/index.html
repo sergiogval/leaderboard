@@ -1,0 +1,64 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title>LeaderBoard</title>
+	<script defer src="main.bundle.js"></script></head>
+	<body>
+	<header>
+	<h1>LEADERBOARD</h1>
+	</header>
+	<main id="main" class="main">
+	<section id="table" class="table">
+		<div class="table-header">
+			<h2 class="table-title">RECENT SCORES</h2>
+			<button class="refresh" id="refresh" type="submit">Refresh</button>
+		</div>
+		<table class="table-generated" id="table-generated">
+			<tr>
+				<td>name:</td>
+				<td>100</td>
+			</tr>
+			<tr>
+				<td>name:</td>
+				<td>102</td>
+			</tr>
+			<tr>
+				<td>name:</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td>name:</td>
+				<td>110</td>
+			</tr>
+			<tr>
+				<td>name:</td>
+				<td>90</td>
+			</tr>
+			<tr>
+				<td>name:</td>
+				<td>100</td>
+			</tr>
+			<tr>
+				<td>name:</td>
+				<td>100</td>
+			</tr>
+		</table>
+	</section>
+	<form id="form" class="form">
+		<h2 id="legend">ADD YOUR SCORE</h2>
+		<fieldset class="fieldset">
+			<label for="userName"></label>
+			<input type="text" class="userName"  name="userName" id="userName" placeholder="Your Name..." required />
+			<label for="score"></label>
+			<input type="text" id="score" name="score" class="score" placeholder="Your Score..." required />
+			<label for="submit"></label>
+			<input id="submit" class="submit" type="submit" value="submit">
+		</fieldset>
+	</form>
+	</main>
+
+	<footer class="footer" id="footer">
+	</footer>
+	</body>
+	</html>
