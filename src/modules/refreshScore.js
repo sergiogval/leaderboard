@@ -1,10 +1,11 @@
-export const  BASE_URL = "https://us-central1-js-capstone-backend.cloudfunctions.net/api";
-export function fetchGame() {
-  const url = `${BASE_URL}/games/Zl4d7IVkemOTTVg2fUdz/scores`;
+import {result} from "lodash";
+
+function fetchGame() {
+  const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/xHcNAgk6UkMi3fEdct8S/scores';
   fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-      });
-}
-
+        data.forEach('result', (e) => {
+          const tr =
+        };})}
+fetchGame()

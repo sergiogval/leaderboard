@@ -1,10 +1,14 @@
 import './style.css';
 import {fetchGame } from "./modules/refreshScore";
-BASE_URL = "https://us-central1-js-capstone-backend.cloudfunctions.net/api";
-
+const tableGenerated = document.querySelector('table-generated')
 
 document.addEventListener("DOMContentLoaded", () => {
+  e.preventDefault()
   fetchGame();
+  tableGenerated.forEach(('elem' in ) {
+
+  }
+
 });
 
 if (localStorage.Scores.length !== fetchGame.length) {

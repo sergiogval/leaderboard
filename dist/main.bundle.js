@@ -116,7 +116,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_refreshScore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/refreshScore */ \"./src/modules/refreshScore.js\");\n\n\nBASE_URL = \"https://us-central1-js-capstone-backend.cloudfunctions.net/api\";\n\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  (0,_modules_refreshScore__WEBPACK_IMPORTED_MODULE_1__.fetchGame)();\n});\n\nif (localStorage.Scores.length !== _modules_refreshScore__WEBPACK_IMPORTED_MODULE_1__.fetchGame.length) {\n  scores = JSON.parse(localStorage.getItem('savedScores'));\n  }\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/refreshScore.js":
+/*!*************************************!*\
+  !*** ./src/modules/refreshScore.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"BASE_URL\": () => (/* binding */ BASE_URL),\n/* harmony export */   \"fetchGame\": () => (/* binding */ fetchGame)\n/* harmony export */ });\nconst  BASE_URL = \"https://us-central1-js-capstone-backend.cloudfunctions.net/api\";\r\nfunction fetchGame() {\r\n  const url = `${BASE_URL}/games/xHcNAgk6UkMi3fEdct8S/scores`;\r\n  fetch(url)\r\n      .then((response) => response.json())\r\n      .then((data) => {\r\n        console.log(data);\r\n      });\r\n}\r\n\r\n\n\n//# sourceURL=webpack://leaderboard/./src/modules/refreshScore.js?");
 
 /***/ })
 
