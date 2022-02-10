@@ -1,16 +1,10 @@
 import './style.css';
-import {fetchGame } from "./modules/refreshScore";
-const tableGenerated = document.querySelector('table-generated')
-
-document.addEventListener("DOMContentLoaded", () => {
-  e.preventDefault()
-  fetchGame();
-  tableGenerated.forEach(('elem' in ) {
-
-  }
-
-});
-
-if (localStorage.Scores.length !== fetchGame.length) {
-  scores = JSON.parse(localStorage.getItem('savedScores'));
-  }
+import {restEndPoint} from "./modules/refreshScore";
+const tableScores = document.getElementById('table-generated')
+window.addEventListener('load', () => {
+  fetch(restEndPoint)
+    .then((response) => response.json())
+    .then() => {
+    document.createElement("tr")
+    tableScores.innerHTML =
+    }})
