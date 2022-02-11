@@ -12,13 +12,12 @@
 	<section id="table" class="table">
 		<div class="table-header">
 			<h2 class="table-title">RECENT SCORES</h2>
-			<button class="refresh" id="refresh" type="submit">Refresh</button>
+			<button formaction="get" class="refresh" id="refresh" type="submit">Refresh</button>
 		</div>
 		<table class="table-generated" id="table-generated">
 		</table>
 	</section>
-	<form action="https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/xHcNAgk6UkMi3fEdct8S/scores"
-	      class="form" id="form" method="post">
+	<form action="https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/" class="form" id="formId" method="post">
 		<h2 id="legend">ADD YOUR SCORE</h2>
 		<fieldset class="fieldset">
 			<label for="userName"></label>
