@@ -1,26 +1,22 @@
+import { API_ID, API_URL, API_SERVICE } from "./variables";
 const form = document.querySelector('.form');
 const [ userName, score ] = form.elements;
 
-class inputEvent {
+class InputEvent {
+  static json;
   constructor( )  {
     this.userName = form.userName
     this.score = form.score
   }
 }
 
-userName.addEventListener('change', () => {
-  inputEvent.userName = userName.value;
-});
-
-score.addEventListener('change', () => {
-  inputEvent.score = score.value;
-});
-
-form.addEventListener('submit', () => {
-  postMessage(JSON.parse(inputEvent))
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+  fetch('API_URL + API_ID + API_SERVICE') {
+  postMessage(InputEvent.json)
   userName.value = ''
   score.value = ''
-})
+  })
 
 
 

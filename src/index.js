@@ -1,8 +1,4 @@
-import './style.css';
-import './modules/submitScore'
-import {restEndPoint}    from './modules/refreshScore'
-import {result}          from "lodash";
-import {promiseCallback} from "async/internal/promiseCallback";
+import './modules/variables'
 
 
 
