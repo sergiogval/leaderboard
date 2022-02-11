@@ -1,10 +1,21 @@
 import './style.css';
-import {restEndPoint} from "./modules/refreshScore";
-const tableScores = document.getElementById('table-generated')
+import './modules/submitScore'
+import {restEndPoint}    from './modules/refreshScore'
+import {result}          from "lodash";
+import {promiseCallback} from "async/internal/promiseCallback";
+
+
+
 window.addEventListener('load', () => {
-  fetch(restEndPoint)
-    .then((response) => response.json())
-    .then() => {
-    document.createElement("tr")
-    tableScores.innerHTML =
-    }})
+  fetch(restEndPoint).result = JSON.parse(promiseCallback(result).then(loadScores()))
+})
+
+
+async function loadScores(data) {
+  const tableScores = document.getElementById('table-generated')
+  await Promise.all([fetch(score)])
+  JSON.parse(data).innerHTML = `
+    <tr>${data}</tr>`
+  tableScores.appendChild('data')
+}
+
