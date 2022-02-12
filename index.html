@@ -5,9 +5,44 @@
 	<meta charset="UTF-8">
 	<title>LeaderBoard</title>
 	<link rel="stylesheet" href="style.css"/>
-<script defer src="main.bundle.js"></script></head>
+</head>
 
 <body>
+	<script type="module">
+
+		// Import the functions you need from the SDKs you need
+	
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+	
+		// TODO: Add SDKs for Firebase products that you want to use
+	
+		// https://firebase.google.com/docs/web/setup#available-libraries
+	
+	
+		// Your web app's Firebase configuration
+	
+		const firebaseConfig = {
+	
+			apiKey: "AIzaSyAV9Z1J9g3Zd8M4V4uXIJ0Er8X_kreg9Ek",
+	
+			authDomain: "the-real-slim-shady.firebaseapp.com",
+	
+			projectId: "the-real-slim-shady",
+	
+			storageBucket: "the-real-slim-shady.appspot.com",
+	
+			messagingSenderId: "350561035938",
+	
+			appId: "1:350561035938:web:f015dcf4620b9ade1759fb"
+	
+		};
+	
+	
+		// Initialize Firebase
+	
+		const app = initializeApp(firebaseConfig);
+	
+	</script>
 	<header>
 		<h1>LEADERBOARD</h1>
 	</header>
@@ -18,12 +53,13 @@
 				<button
 					class="table-button"
 					id="refresh-button"
-					onclick="window.location.href='index.html'"
+					onclick="fetch(https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/xHcNAgk6UkMi3fEdct8S/scores)"
 				>
 Refresh</button>
 			</div>
-			<table class="table-generated" id="table-generated">
-			</table>
+			<div class="table-generated" id="table-generated">
+
+			</>
 		</section>
 		<form action="https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/xHcNAgk6UkMi3fEdct8S/scores" class="form" id="formId"
 			method="post">
