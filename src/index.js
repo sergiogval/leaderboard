@@ -13,16 +13,16 @@ function getScores() {
     },
   };
   fetch(API_URL, config)
-      .then((result) => result.json())
-      .then((data) => {
-        for (let i = 0; i <= data.length; i += 1) {
-          scoreList.innerHTML = `
+    .then((result) => result.json())
+    .then((data) => {
+      for (let i = 0; i <= data.length; i += 1) {
+        scoreList.innerHTML = `
         <div>${data[i].user}<div>`;
-        }
-        displayContent.appendChild(scoreList);
-      });
+      }
+      displayContent.appendChild(scoreList);
+    });
 }
-getScores()
+getScores();
 
 const refresh = document.getElementById('refresh');
 refresh.addEventListener('click', (e) => {
