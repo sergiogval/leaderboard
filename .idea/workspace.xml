@@ -7,8 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="539887d2-de53-4959-b062-77b2db148f50" name="Changes" comment="Add API call">
+    <list default="true" id="539887d2-de53-4959-b062-77b2db148f50" name="Changes" comment="Fix api call">
+      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/main.bundle.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/consumeAPI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/displayLeader.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/modules/variables.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
@@ -17,7 +22,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MIT.md" beforeDir="false" afterPath="$PROJECT_DIR$/MIT.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/main.bundle.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
@@ -170,7 +175,7 @@
       <workItem from="1644508845734" duration="21309000" />
       <workItem from="1644546814136" duration="9152000" />
       <workItem from="1644562319448" duration="3866000" />
-      <workItem from="1644619366638" duration="3478000" />
+      <workItem from="1644619366638" duration="4443000" />
     </task>
     <task id="LOCAL-00001" summary="Fix config file">
       <created>1644509031357</created>
@@ -186,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644529615205</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fix api call">
+      <created>1644623738014</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1644623738014</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +218,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix config file" />
     <MESSAGE value="Add API call" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add API call" />
+    <MESSAGE value="Fix api call" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix api call" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
