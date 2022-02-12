@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>LeaderBoard</title>
+	<link rel="stylesheet" href="style.css"/>
 </head>
+
 <body>
+
 <header>
 	<h1>LEADERBOARD</h1>
 </header>
@@ -12,25 +16,30 @@
 	<section id="table" class="table">
 		<div class="table-header">
 			<h2 class="table-title">RECENT SCORES</h2>
-			<button class="refresh" id="refresh" type="button">Refresh</button>
+			<button
+				class="table-button"
+				id="refresh-button"> Refresh
+			</button>
 		</div>
-		<ul class="table_item" id="table_item">
+		<ul class="table_generated" id="table_item">
+
 		</ul>
 	</section>
-	<iframe name="hiddenFrame" class="hide"></iframe>
-	<form target="hiddenFrame" class="form" id="formId" method="post">
+	<form class="form" id="formId">
 		<h2 id="legend">ADD YOUR SCORE</h2>
 		<fieldset class="fieldset">
 			<label for="userName"></label>
-			<input type="text" class="userName" name="user" id="userName" placeholder="Your Name..." required/>
-			<label for="score"></label>
-			<input type="text" id="score" name="score" class="score" placeholder="Your Score..." required/>
-			<label for="submit"></label>
-			<input class="submit" id="submit" type="submit" value="Share">
+			<input type="text" class="userName" name="userNa" id="userName" placeholder="Your Name..." required/>
+			<label for="userScore"></label>
+			<input type="text" id="userScore" name="score" class="UserScore" placeholder="Your Score..." required/>
+			<label for="submitScore"></label>
+			<input class="submit" id="submitScore" type="submit" value="Share">
 		</fieldset>
 	</form>
 </main>
 <footer class="footer" id="footer">
 </footer>
+<script src="index.js"></script>
 </body>
+
 </html>

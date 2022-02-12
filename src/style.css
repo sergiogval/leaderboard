@@ -66,21 +66,30 @@ main {
   height: auto;
 }
 
-table {
+ul {
   border: solid 2px black;
   border-radius: 4px;
   margin: 0;
   padding: 0;
+  font-weight: bolder;
+  color: black;
 }
 
-tr {
+li {
   display: flex;
   margin: 0;
   padding: 5px 0 5px 15px;
+  color: black;
 }
 
-tr:nth-child(even) {
+li:nth-child(even) {
   background-color: #ddd;
+}
+
+span {
+  color: black;
+  height: auto;
+  display: inline-flex;
 }
 
 form {

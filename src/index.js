@@ -1,11 +1,11 @@
 import './style.css';
-import { postMessage } from './modules/submitScore';
+import './modules/submitScore';
 
 const API_URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/xHcNAgk6UkMi3fEdct8S/scores';
 
 function getScores() {
   const displayContent = document.getElementById('table_item');
-  const scoreList = document.createElement('div');
+  const scoreList = document.createElement('li');
   const config = {
     headers: {
       'Access-Control-Allow-Origin': origin,
@@ -13,15 +13,16 @@ function getScores() {
     },
   };
   fetch(API_URL, config)
-    .then((result) => result.json())
+    .then((response) => response.json())
     .then((data) => {
-      for (let i = 0; i <= data.length; i += 1) {
-        scoreList.innerHTML = `
-        <div>${data[i].user}<div>`;
+      for (let i = 0; i <= data.result.length; i += 1) {
+        scoreList.textContent = `
+    <span>${data.result[i].user}</span>`;
+        displayContent.append(scoreList);
       }
-      displayContent.appendChild(scoreList);
     });
 }
+
 getScores();
 
 const refresh = document.getElementById('refresh');
