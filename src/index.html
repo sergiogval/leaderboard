@@ -1,36 +1,36 @@
-	<!DOCTYPE html>
-	<html lang="en">
-	<head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 	<meta charset="UTF-8">
 	<title>LeaderBoard</title>
-	</head>
-	<body>
-	<header>
+</head>
+<body>
+<header>
 	<h1>LEADERBOARD</h1>
-	</header>
-	<main id="main" class="main">
+</header>
+<main id="main" class="main">
 	<section id="table" class="table">
 		<div class="table-header">
 			<h2 class="table-title">RECENT SCORES</h2>
-			<button formaction="get" class="refresh" id="refresh" type="submit">Refresh</button>
+			<button class="refresh" id="refresh" type="button">Refresh</button>
 		</div>
-		<ul class="scores" id="scores">
+		<ul class="table_item" id="table_item">
 		</ul>
 	</section>
-	<form action="https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/" class="form" id="formId" method="post">
+	<iframe name="hiddenFrame" class="hide"></iframe>
+	<form target="hiddenFrame" class="form" id="formId" method="post">
 		<h2 id="legend">ADD YOUR SCORE</h2>
 		<fieldset class="fieldset">
 			<label for="userName"></label>
-			<input type="text" class="userName"  name="user" id="userName" placeholder="Your Name..." required />
+			<input type="text" class="userName" name="user" id="userName" placeholder="Your Name..." required/>
 			<label for="score"></label>
-			<input type="text" id="score" name="score" class="score" placeholder="Your Score..." required />
+			<input type="text" id="score" name="score" class="score" placeholder="Your Score..." required/>
 			<label for="submit"></label>
 			<input class="submit" id="submit" type="submit" value="Share">
 		</fieldset>
 	</form>
-	</main>
-
-	<footer class="footer" id="footer">
-	</footer>
-	</body>
-	</html>
+</main>
+<footer class="footer" id="footer">
+</footer>
+</body>
+</html>

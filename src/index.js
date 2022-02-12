@@ -1,27 +1,38 @@
-const API_URL =  "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/xHcNAgk6UkMi3fEdct8S/scores";
+import './style.css';
+import { postMessage } from './modules/submitScore';
 
-const getData =  ()=>{
-  const response = fetch(API_URL, config);
-  let data = response.json(display);
-  display(data);
-  console.log(data);
-  console.log(data.result[0]);
+const API_URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/xHcNAgk6UkMi3fEdct8S/scores';
 
-};
+getScores();
 
-getData();
-
-
-const displayContainer = document.querySelector('.table_item');
-let feed = '';
-
-const display = (data) => {
-
-for(let i = 0; i <data.result.length; i++) {
-feed +=  `<tr><td>${data.result[i].user}</td><td>${data.result[i].score}</td></tr>`
-
+function getScores() {
+  const displayContent = document.getElementById('table_item');
+  const scoreList = document.createElement('div');
+  const config = {
+    headers: {
+      'Access-Control-Allow-Origin': origin,
+      Accept: 'application/json',
+    },
+  };
+  fetch(API_URL, config)
+    .then((result) => result.json())
+    .then((data) => {
+      for (let i = 0; i <= data.length; i += 1) {
+        scoreList.innerHTML = `
+        <div>${data[i].user}<div>`;
+      }
+      displayContent.appendChild(scoreList);
+    });
 }
 
-displayContainer.innerHTML = feed;
+const refresh = document.getElementById('refresh');
+refresh.addEventListener('click', (e) => {
+  e.preventDefault();
+  getScores();
+});
 
-}
+const newScore = document.getElementById('submit');
+newScore.addEventListener('click', (e) => {
+  e.preventDefault();
+  postMessage();
+});
