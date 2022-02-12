@@ -3,8 +3,6 @@ import { postMessage } from './modules/submitScore';
 
 const API_URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/xHcNAgk6UkMi3fEdct8S/scores';
 
-getScores();
-
 function getScores() {
   const displayContent = document.getElementById('table_item');
   const scoreList = document.createElement('div');
@@ -15,15 +13,16 @@ function getScores() {
     },
   };
   fetch(API_URL, config)
-    .then((result) => result.json())
-    .then((data) => {
-      for (let i = 0; i <= data.length; i += 1) {
-        scoreList.innerHTML = `
+      .then((result) => result.json())
+      .then((data) => {
+        for (let i = 0; i <= data.length; i += 1) {
+          scoreList.innerHTML = `
         <div>${data[i].user}<div>`;
-      }
-      displayContent.appendChild(scoreList);
-    });
+        }
+        displayContent.appendChild(scoreList);
+      });
 }
+getScores()
 
 const refresh = document.getElementById('refresh');
 refresh.addEventListener('click', (e) => {
