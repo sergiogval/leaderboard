@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/index.js',
   mode: 'development',
   devServer: {
-    static: './docs',
+    static: './dist',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -14,7 +14,7 @@ module.exports = {
   ],
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'docs'),
+    path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
   module: {

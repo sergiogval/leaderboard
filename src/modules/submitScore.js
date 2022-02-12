@@ -1,23 +1,27 @@
-import { API_ID, API_URL, API_SERVICE } from "./variables";
-const form = document.querySelector('.form');
-const [ userName, score ] = form.elements;
+const API_URL =  "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/xHcNAgk6UkMi3fEdct8S/scores";
 
-class InputEvent {
-  static json;
-  constructor( )  {
-    this.userName = form.userName
-    this.score = form.score
+function postMessage(data) {
+  const config = {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
   }
-}
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault()
-  fetch('API_URL + API_ID + API_SERVICE') {
-  postMessage(InputEvent.json)
-  userName.value = ''
-  score.value = ''
+  fetch(API_URL, config)
+  .then((r) => r.json())
+  .then((data) => {
+    console.log(data)
   })
-
-
-
-
+  const data = {
+    user: userName.value,
+    score: userScore.value
+  }
+  postMessage(data)
+  userName.value = ''
+  userScore.value = ''
+  window.location.reload()
+}
+// end of submitScore function
+const setScore = document.getElementById('submit').addEventListener('click', postMessage)

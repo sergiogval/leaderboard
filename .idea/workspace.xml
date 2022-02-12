@@ -7,8 +7,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="539887d2-de53-4959-b062-77b2db148f50" name="Changes" comment="Fix api call 2">
+    <list default="true" id="539887d2-de53-4959-b062-77b2db148f50" name="Changes" comment="Fix api call">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIT.md" beforeDir="false" afterPath="$PROJECT_DIR$/MIT.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/refreshScore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/refreshScore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/submitScore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/submitScore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,18 +59,13 @@
         </map>
       </branch-storage>
     </favorite-branches>
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--tags" />
-        <option name="title" value="All" />
-      </GitPushTagMode>
-    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="sprint1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -72,9 +76,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/index.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/modules/displayLeader.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/modules/consumeAPI.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modules/displayLeader.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/index.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/index.html" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -159,7 +163,7 @@
       <workItem from="1644508845734" duration="21309000" />
       <workItem from="1644546814136" duration="9152000" />
       <workItem from="1644562319448" duration="3866000" />
-      <workItem from="1644619366638" duration="5404000" />
+      <workItem from="1644619366638" duration="4443000" />
     </task>
     <task id="LOCAL-00001" summary="Fix config file">
       <created>1644509031357</created>
@@ -182,14 +186,7 @@
       <option name="project" value="LOCAL" />
       <updated>1644623738014</updated>
     </task>
-    <task id="LOCAL-00004" summary="Fix api call 2">
-      <created>1644624213541</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1644624213541</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,8 +207,7 @@
     <MESSAGE value="Fix config file" />
     <MESSAGE value="Add API call" />
     <MESSAGE value="Fix api call" />
-    <MESSAGE value="Fix api call 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix api call 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix api call" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

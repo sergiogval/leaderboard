@@ -1,17 +1,27 @@
-import './modules/variables'
+const API_URL =  "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/xHcNAgk6UkMi3fEdct8S/scores";
+
+const getData =  ()=>{
+  const response = fetch(API_URL, config);
+  let data = response.json(display);
+  display(data);
+  console.log(data);
+  console.log(data.result[0]);
+
+};
+
+getData();
 
 
+const displayContainer = document.querySelector('.table_item');
+let feed = '';
 
-window.addEventListener('load', () => {
-  fetch(restEndPoint).result = JSON.parse(promiseCallback(result).then(loadScores()))
-})
+const display = (data) => {
 
+for(let i = 0; i <data.result.length; i++) {
+feed +=  `<tr><td>${data.result[i].user}</td><td>${data.result[i].score}</td></tr>`
 
-async function loadScores(data) {
-  const tableScores = document.getElementById('table-generated')
-  await Promise.all([fetch(score)])
-  JSON.parse(data).innerHTML = `
-    <tr>${data}</tr>`
-  tableScores.appendChild('data')
 }
 
+displayContainer.innerHTML = feed;
+
+}
