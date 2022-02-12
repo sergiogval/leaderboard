@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>LeaderBoard</title>
+	<link rel="stylesheet" href="style.css"/>
+<script defer src="main.bundle.js"></script></head>
+
+<body>
+	<header>
+		<h1>LEADERBOARD</h1>
+	</header>
+	<main id="main" class="main">
+		<section id="table" class="table">
+			<div class="table-header">
+				<h2 class="table-title">RECENT SCORES</h2>
+				<button
+					class="table-button"
+					id="refresh-button"
+					onclick="window.location.href='index.html'"
+				>
+Refresh</button>
+			</div>
+			<table class="table-generated" id="table-generated">
+			</table>
+		</section>
+		<form action="https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/xHcNAgk6UkMi3fEdct8S/scores" class="form" id="formId"
+			method="post">
+			<h2 id="legend">ADD YOUR SCORE</h2>
+			<fieldset class="fieldset">
+				<label for="userName"></label>
+				<input type="text" class="userName" name="userNa" id="userName" placeholder="Your Name..." required />
+				<label for="score"></label>
+				<input type="text" id="userScore" name="score" class="UserScore" placeholder="Your Score..." required />
+				<label for="submitScore"></label>
+				<input class="submit" id="submitScore" type="submit" value="Share">
+			</fieldset>
+		</form>
+	</main>
+	<footer class="footer" id="footer">
+	</footer>
+	<script src="index.js"></script>
+</body>
+
+</html>
