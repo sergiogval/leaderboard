@@ -46,7 +46,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 40%;
-  margin-left: 8rem;
+  margin-left: auto;
   margin-right: auto;
 }
 
@@ -66,21 +66,30 @@ main {
   height: auto;
 }
 
-table {
+ul {
   border: solid 2px black;
   border-radius: 4px;
   margin: 0;
   padding: 0;
+  font-weight: bolder;
+  color: black;
 }
 
-tr {
+li {
   display: flex;
   margin: 0;
   padding: 5px 0 5px 15px;
+  color: black;
 }
 
-tr:nth-child(even) {
+li:nth-child(even) {
   background-color: #ddd;
+}
+
+span {
+  color: black;
+  height: auto;
+  display: inline-flex;
 }
 
 form {
@@ -119,13 +128,21 @@ input {
   padding: 6px 4px;
   color: black;
   font-style: normal;
-  margin-left: 15rem;
+  margin-left: 60%;
+}
+
+.hide {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 1px;
+  height: 1px;
 }
 
 footer {
   height: 2rem;
   width: 100vw;
   display: flex;
-  background: var(--secondary-color);
+  background-color: #f5f5f5;
   border: solid 2px black;
 }

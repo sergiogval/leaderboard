@@ -1,27 +1,37 @@
-const API_URL =  "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/xHcNAgk6UkMi3fEdct8S/scores";
+import './style.css';
+import { postMessage, API_URL } from './modules/submitScore';
 
-const getData =  ()=>{
-  const response = fetch(API_URL, config);
-  let data = response.json(display);
-  display(data);
-  console.log(data);
-  console.log(data.result[0]);
-
+const getScores = () => {
+  const displayContent = document.getElementById('table_item');
+  const scoreList = document.createElement('li');
+  const config = {
+    headers: {
+      'Access-Control-Allow-Origin': origin,
+      Accept: 'application/json',
+    },
+  };
+  fetch(API_URL, config)
+    .then((response) => response.json())
+    .then((data) => {
+      for (let i = 0; i < data.result.length; i += 1) {
+        scoreList.textContent = `
+    ${data.result[i].user}
+    ${data.result[i].score}`;
+        displayContent.append(scoreList);
+      }
+    });
 };
 
-getData();
+getScores();
 
+const refresh = document.getElementById('refresh');
+refresh.addEventListener('click', () => {
+  getScores();
+});
 
-const displayContainer = document.querySelector('.table_item');
-let feed = '';
-
-const display = (data) => {
-
-for(let i = 0; i <data.result.length; i++) {
-feed +=  `<tr><td>${data.result[i].user}</td><td>${data.result[i].score}</td></tr>`
-
-}
-
-displayContainer.innerHTML = feed;
-
-}
+const newScore = document.getElementById('submitScore');
+newScore.addEventListener('submit', (e) => {
+  e.preventDefault();
+  postMessage()
+    .then((r) => r.json());
+});

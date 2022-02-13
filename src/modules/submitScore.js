@@ -1,27 +1,18 @@
-const API_URL =  "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/xHcNAgk6UkMi3fEdct8S/scores";
-
-function postMessage(data) {
+const API_URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/xHcNAgk6UkMi3fEdct8S/scores';
+const postMessage = async () => {
+  const UserName = document.getElementById('userName').value;
+  const UserScore = document.getElementById('userScore').value;
   const config = {
-    method: 'POST',
     headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
+      method: 'POST',
+      'Access-Control-Allow-Origin': 'origin',
+      'Content-Type': 'application/x-www-form-urlencoded',
     },
-    body: JSON.stringify(data)
-  }
-  fetch(API_URL, config)
-  .then((r) => r.json())
-  .then((data) => {
-    console.log(data)
-  })
-  const data = {
-    user: userName.value,
-    score: userScore.value
-  }
-  postMessage(data)
-  userName.value = ''
-  userScore.value = ''
-  window.location.reload()
-}
-// end of submitScore function
-const setScore = document.getElementById('submit').addEventListener('click', postMessage)
+  };
+  await fetch(API_URL, config, (JSON.stringify({
+    user: UserName,
+    score: parseInt(UserScore, 10),
+  })));
+};
+
+export { postMessage, API_URL };
