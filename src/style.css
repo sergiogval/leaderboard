@@ -155,11 +155,3 @@ footer {
   background-color: #f5f5f5;
   border: solid 2px black;
 }
-
-.hide {
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  width: 1px;
-  height: 1px;
-}
